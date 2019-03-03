@@ -96,3 +96,14 @@ function addevent(){
   var modal = document.getElementById('myModal');
   modal.style.display = "none";
 }
+
+function eventCollapseHTML() {
+	var output = "";
+	ref.child(groupname).child(username).child("events")on("child_added", function(snapshot) {
+		var eventid = snapshot.val();
+		output += "<button class="collapsible">"+ eventid +"</button>";
+		output += "<div class="content"><p>"+ +"</p></div>";
+  }
+
+	document.write(output);
+}
