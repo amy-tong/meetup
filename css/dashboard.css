@@ -36,8 +36,16 @@ body{
 	justify-content: space-evenly;
 }
 
+.tab {
+	font-size: 15;
+}
+
+.tab:hover {
+	cursor: pointer;
+}
+
 .reg-tab {
-	height: 35px;
+	height: 40px;
 	margin-left: 15px;
 	margin-right: 5px;
 	border-radius: 25px 75px 75px 25px;
@@ -45,13 +53,9 @@ body{
 	background-color: #dbe7fd;
 }
 
-.tab:hover {
-	cursor: pointer;
-}
-
 .large-tab {
 	z-index: 1;
-	height: 35px;
+	height: 40px;
 	margin-left: 15px;
 	margin-right: -15px;
 	border-radius: 25px 75px 75px 25px;
@@ -79,12 +83,22 @@ body{
 	display: flex;
 }
 
-.subtab {
+.reg-subtab {
 	height: 30px;
 	margin-left: 5px;
+	margin-top: 15px;
 	border-radius: 15px 15px 0px 0px;
 	border: none;
 	background-color: #dbe7fd;
+}
+
+.large-subtab {
+	height: 45px;
+	margin-left: 5px;
+	border-radius: 20px 20px 0px 0px;
+	border: none;
+	background-color: #dbe7fd;
+	font-size: 15;
 }
 
 #logout {
@@ -107,21 +121,26 @@ body{
 #mainpage-carousel {
 	background-color: lightgreen;
 	grid-area: pges;
-	position: relative;
-/* 	z-index: 3; */
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
 }
 
-#carousel-wrapper {
-	position: absolute;
-	left: 0;
-	display: flex;
+
+
+/* SCHEDULE ANALYTICS PAGE */
+#3 {
+	display: grid;
+	grid-template-areas: 
+		"class overlay";
+	grid-template-columns: 25% 75%;
+	align-items: center;
+	justify-items: center;
 }
 
-.page {
-	position: relative;
-	height: 100%;
-	width: 100%;
+#same-classes {
+	grid-area: class;
+	font-size: 20;
+}
+
+#schedule-overlay {
+	grid-area: overlay;
+	margin-bottom: 20px;
 }
